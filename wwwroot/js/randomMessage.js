@@ -1,3 +1,4 @@
+
 (function () {
     const phrases1 = ["There once was", "Never before have I seen", "Unbeknown to me, there is", "Today I found out that my neighbour is"];
     const phrases2 = ["an elephant", "a serial killer", "a clock", "an escaped prisoner", "an Avon salesman", "a bartender", "a King", "a Princess"];
@@ -38,6 +39,5 @@
     //Join the array together into a string
     finishedMsg = msg.join(" ");
     //Display the message
-    console.log("Ran");
     document.getElementById("message").textContent = finishedMsg;
 }())
