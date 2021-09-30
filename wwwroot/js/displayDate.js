@@ -7,7 +7,7 @@ let numberDate = today.getDate().toString();
 let suffix;
 
 switch (numberDate[numberDate.length - 1]) {
-    case "0" || "1":
+    case "1":
         suffix = suffices[0];
         break;
     case "2":
@@ -23,7 +23,7 @@ switch (numberDate[numberDate.length - 1]) {
 //Maybe add toString here on numberDate?
 const date = numberDate + suffix;
 
-const msg = `Today is ${days[today.getDay() - 1]}, ${date} ${months[today.getMonth() - 1]}, ${today.getFullYear()}`;
+const msg = `Today is ${days[today.getDay() - 1]}, ${date} ${months[today.getMonth()]}, ${today.getFullYear()}`;
 
 
 
