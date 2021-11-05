@@ -1,16 +1,22 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <link rel="stylesheet" type="text/css" href="../wwwroot/style.css" />
-    </head>
 
-    <body>
-        <div style="position: absolute; padding-top: 50%; left: 50%; transform:translate(-50%,-50%); text-align: center;">
-            <p class="subtitle" id="date">Something has gone wrong.</p>
-            <p class="subtitle" id="time">Sorry.</p>
-            <a href="../index.html" id="return">Return to Home</a>
-        </div>
-        <script src="../wwwroot/js/displayDate.js"></script>
-        <script src="../wwwroot/js/rotateReturn.js"></script>
-    </body>
+<head>
+	<link rel="stylesheet" type="text/css" href="../wwwroot/style.css" />
+</head>
+
+<body>
+	<div id="rotateObject" style="transform:translate(-50%, 100%); display:inline-block; position: absolute; left: 50%; text-align: center;">
+		<div style="position: relative;" id="rotateText"> 
+			<h2 class="subtitle" id="date">Something has gone wrong.</h2>
+			<h2 class="subtitle" id="time">Sorry.</h2>
+			<a href="../index.html">Return to Home</a>
+		</div>
+	</div>
+
+
+	<script src="../wwwroot/js/displayDate.js"></script>
+	<script src="../wwwroot/js/rotateElement.js"></script>
+</body>
+
 </html>

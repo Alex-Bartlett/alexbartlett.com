@@ -2,10 +2,33 @@ body{
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.title{
+h1{
     margin-top: 0em;
     font-size: 4em;
+	font-weight: normal;
 }
-.subtitle{
+h2{
     font-size: 3em;
+	font-weight: normal;
+}
+h3{
+	font-size: 2em;
+	font-weight: normal;
+}
+.centred{
+	text-align: center;
+	display:inline-block;
+}
+.centre-block{
+	background-color: whitesmoke;
+	margin-left: 50%;
+	transform:translateX(-50%);
+	padding: 20px 5% 20px 5%;
+	text-align: left;
+	min-width: 200px;
+	max-width: 600px;
+	border-left: 2px;
+	border-right: 2px;
+	border-color: black;
+	box-shadow: 0 9px 0px 0px whitesmoke, 0 -9px 0px 0px whitesmoke, 12px 0 15px -4px rgba(65, 65, 65, 0.8), -12px 0 15px -4px rgba(65, 65, 65, 0.8);;
 }
