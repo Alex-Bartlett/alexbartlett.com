@@ -1,4 +1,4 @@
-const days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 const suffices = ["st", "nd", "rd", "th"];
 
@@ -23,7 +23,7 @@ switch (numberDate[numberDate.length - 1]) {
 //Maybe add toString here on numberDate?
 const date = numberDate + suffix;
 
-const msg = `Today is ${days[today.getDay() - 1]}, ${date} ${months[today.getMonth()]}, ${today.getFullYear()}`;
+const msg = `Today is ${days[today.getDay()]}, ${date} ${months[today.getMonth()]}, ${today.getFullYear()}`;
 
 
 
