@@ -26,15 +26,19 @@ header {
 
 footer {
     background-color: brown;
-    padding: 1em 3em;
     position: absolute;
     bottom: 0;
-    width: 100%;
+    /* padding: 10em; */
+    width: 100vw;
 }
 
-a {
+footer a {
     color: white;
     text-decoration: none;
+}
+
+.footer-content {
+    padding: 1em 2em;
 }
 
 a:hover {
