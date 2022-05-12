@@ -39,8 +39,10 @@ jobs:
           server: ftp.alexbartlett.com
           username: ${{ secrets.FTPLOGIN }}
           password: ${{ secrets.FTPKEY }}
+          server-dir: public_html/
           exclude: |
             **/.git*
-            **/.git*/*
-            **/.vscode*
+            **/.git*/**
+            **/.github*
+            **/.vscode/**
 
