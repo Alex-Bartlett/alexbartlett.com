@@ -1,0 +1,36 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Alex Bartlett">
+    <meta name="description" content="Convert your sentences from boring to 🅱(B) using this one simple trick! The first letter of each word is replaced with a 🅱 B emoji. Simple, elegant, beautiful.">
+    <title>🅱-inator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>🅱-inator</h1>
+    </header>
+
+    <main>
+        <br class="br-tall">
+        <section class="box medium bordered">
+            <h2>Enter text to 🅱-inate and press convert</h2>
+        </section>
+        <br class="br-small">
+        <form name="form">
+            <div class="box medium bordered">
+                <textarea name="text" class="box" placeholder="Enter text here..."></textarea>
+            </div>
+            <input class="btn extra-round-bordered" type="button" onclick="submitForm()" value="🅱onvert" />
+
+            <div class="box medium bordered" id="output" hidden>Output goes here</div>
+        </form>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>

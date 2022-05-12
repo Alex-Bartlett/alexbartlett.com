@@ -1,0 +1,36 @@
+body {
+	margin: 0;
+	font-family: Arial, Helvetica, sans-serif;
+	color: #fff;
+	background-color: #2b313b;
+}
+
+section {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	min-height: 400px;
+	padding: 100px 20vw;
+}
+
+.dark-section{
+	background-color: #2b313b;
+}
+
+.medium-section {
+	background-color: #ff5500;
+}
+
+.bright-section {
+	background-color: rgb(44, 190, 166);
+}
+
+.wave {
+	position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
