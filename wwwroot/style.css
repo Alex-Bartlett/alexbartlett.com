@@ -4,6 +4,7 @@
     --foreground-primary: rgb(101, 60, 114);
     --text-primary: #fff;
     --text-secondary: #ddd;
+    --highlight: rgb(107, 103, 128);
     --border-primary: solid var(--foreground-primary) 2px;
     --border-secondary: solid var(--background-secondary) 2px;
     --border-radius: 8px;
@@ -13,6 +14,10 @@
     background-color: var(--background-primary);
     color: var(--text-primary);
     font-family: 'Courier New', Courier, monospace;
+}
+
+* ::selection {
+    background-color: var(--highlight);
 }
 
 body {
@@ -171,6 +176,11 @@ header {
             font-size: 20px;
         }
     }
+    @media (max-width: 1000px) {
+        .cards {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
     @media (max-width: 700px) {
         body {
             width: 80%;
@@ -190,8 +200,10 @@ header {
         #linkedin {
             margin-left: 5px;
         }
+    }
+    @media (max-width: 600px) {
         .cards {
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 1fr;
         }
     }
 }
