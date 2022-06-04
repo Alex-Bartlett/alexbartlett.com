@@ -17,6 +17,7 @@ body {
     background-color: white;
     background: url(img/background.png);
     background-repeat: repeat;
+    background-size: 100%;
 }
 
 main {
@@ -105,6 +106,9 @@ h2 {
 @media only screen and (min-width: 1440px) {
     main {
         margin: 0 25vw 0 25vw;
+    }
+    body {
+        background-size: auto;
     }
     .medium {
         width: 30vw;
