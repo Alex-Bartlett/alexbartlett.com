@@ -1,110 +1,159 @@
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  text-align: center;
+:root {
+    --background-primary: rgb(37, 33, 53);
+    --background-secondary: rgb(77, 71, 104);
+    --foreground-primary: rgb(101, 60, 114);
+    --text-primary: #fff;
+    --text-secondary: #ddd;
+    --border-primary: solid var(--foreground-primary) 2px;
+    --border-radius: 8px;
 }
 
-header {
-  text-align: center;
+* {
+    background-color: var(--background-primary);
+    color: var(--text-primary);
+    font-family: 'Courier New', Courier, monospace;
+}
+
+body {
+    width: 50%;
+    margin: auto;
+}
+
+main {
+    box-sizing: border-box;
+}
+
+h1,
+h2 {
+    font-weight: 500;
 }
 
 h1 {
-  margin-top: 0em;
-  font-size: 4em;
-  font-weight: normal;
+    font-size: 128px;
+    margin: 0 0 5px 0;
 }
+
 h2 {
-  font-size: 3em;
-  font-weight: normal;
+    margin: 0px;
+    font-size: 64px;
 }
+
 h3 {
-  font-size: 2em;
-  font-weight: normal;
-  margin-top: 0;
+    font-size: 32px;
+    margin-bottom: 0;
 }
 
-#wrapper {  
-  display: -ms-grid;
-  display: grid;
-  justify-content: center;
-  align-items: center;
-  grid-auto-flow: row;
+h2,
+h3 {
+    color: var(--text-secondary);
 }
 
-.centred {
-  text-align: center;
-}
-.centre-block {
-  background-color: whitesmoke;
-  padding: 15px 30px;
-  text-align: left;
-  max-width: 60em;
-  border-left: 2px;
-  border-right: 2px;
-  border-color: black;
-  box-shadow: 0 9px 0px 0px whitesmoke, 0 -9px 0px 0px whitesmoke,
-    12px 0 15px -4px rgba(65, 65, 65, 0.8),
-    -12px 0 15px -4px rgba(65, 65, 65, 0.8);
+.heading {
+    margin-top: 100px;
 }
 
-kbd {
-  font-weight: bold;
-  border-radius: 3px;
-  padding: 1px 1px 1px 1px;
-  border: 1px solid gray;
-  background-color: lightgrey;
+.title>h1,
+.title>h2 {
+    display: inline-block;
+    margin-right: 16px;
 }
 
-#input_playerList {
-  font-size: 1em;
-  display: block;
-  border: solid 1px;
-  border-radius: 5px;
-  margin: auto;
-  height: 2em;
-  width: -webkit-fill-available;
-  max-height: 2em;
-  max-width: 25em;
-  transition: all 0.5s ease 0s;
+.underlined {
+    border-bottom: var(--border-primary);
 }
 
-#input_playerList:focus {
-  font-size: 1.5em;
-  max-width: 22em;
+.socials {
+    display: flex;
+    justify-content: space-between;
+    max-width: 50em;
+    margin: 80px auto;
 }
 
-.secretSantaOutput {
-  font-size: 1.5em;
-  line-height: 50px;
+.socials a {
+    display: flex;
+    width: 7em;
+    align-items: center;
+    justify-content: center;
+    border: var(--border-primary);
+    border-radius: var(--border-radius);
+    padding: 10px;
+    font-size: 24px;
+    text-decoration: none;
+    transition: background-color 0.2s;
 }
 
-.spoiler {
-  -webkit-filter: blur(20px) grayscale(1);
-  filter: blur(20px) grayscale(1);
-  -webkit-transition-property: -webkit-filter;
-  transition-property: filter;
-  -webkit-transition-duration: 0.4s;
-  transition-duration: 0.4s;
-}
-.spoiler:hover,
-.spoiler:focus {
-  -webkit-filter: blur(0px) grayscale(0);
-  filter: blur(0px) grayscale(0);
+.socials a:hover {
+    background-color: var(--foreground-primary);
 }
 
-#btn_submitPlayerList {
-  cursor: pointer;
-  margin: 20px;
-  width: 120px;
-  height: 40px;
-  font-size: 1.2em;
-  border: rgb(0, 0, 0) solid 1px;
-  border-radius: 10px;
-  background-color: white;
-  transition: all 0.2s ease-out;
+.socials a+a {
+    margin-left: 20px;
 }
 
-#btn_submitPlayerList:hover {
-  background-color: rgb(79, 128, 184);
-  border-color: white;
-  color: white;
+.socials span {
+    color: var(--text-secondary);
+    background: transparent;
+}
+
+.socials a>img {
+    height: 1em;
+    width: 1em;
+    margin-right: 10px;
+    background: transparent;
+}
+
+#linkedin {
+    width: 1.2em;
+    margin-right: calc(10px - 0.2em);
+}
+
+@media screen {
+    @media (min-width: 1220px) {
+        .float-left {
+            max-width: 700px;
+            background-color: var(--background-secondary);
+            border-radius: var(--border-radius);
+            margin: 80px 0;
+            padding: 10px 20px;
+        }
+        .float-left p {
+            background: transparent;
+            color: var(--text-primary);
+            font-size: 20px;
+        }
+    }
+    @media (max-width: 1220px) {
+        body {
+            width: 70%;
+        }
+        .title>h1 {
+            font-size: 100px;
+        }
+        .socials {
+            margin: 40px auto;
+        }
+        .socials span {
+            font-size: 20px;
+        }
+    }
+    @media (max-width: 700px) {
+        body {
+            width: 80%;
+        }
+        .title>h1 {
+            font-size: 64px;
+        }
+        .title>h2 {
+            font-size: 48px;
+        }
+        .socials span {
+            display: none;
+        }
+        .socials a>img {
+            margin: 0;
+        }
+        #linkedin {
+            margin-left: 5px;
+        }
+    }
 }
