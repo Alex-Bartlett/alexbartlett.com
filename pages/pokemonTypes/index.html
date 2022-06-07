@@ -1,90 +1,175 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../wwwroot/style.css" />
     <link rel="stylesheet" href="style.css" />
     <title>Pok&#233;mon Type Helper</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <main>
-        <header>
-            <h1 class="title">Pok&#233;mon Type Helper</h1>
-        </header>
-        <div class="content" id="content">
-            <h2 id="selectedType"></h2>
-            <div class="stats">
-                <div>
-                    <h3>Super Effective To:</h3>
-                    <ul id="hiAtk">
-                        <li>None selected</li>
-                    </ul>
-                </div>
-                <div>
-                    <h3>Not Very Effective To:</h3>
-                    <ul id="loAtk">
-                        <li>None selected</li>
-                    </ul>
-                </div>
-                <div>
-                    <h3>Doesn't Affect:</h3>
-                    <ul id="noAtk">
-                        <li>None selected</li>
-                    </ul>
-                </div>
-                <div>
-                    <h3>Resistant To:</h3>
-                    <ul id="hiDef">
-                        <li>None selected</li>
-                    </ul>
-                </div>
-                <div>
-                    <h3>Weak To:</h3>
-                    <ul id="loDef">
-                        <li>None selected</li>
-                    </ul>
-                </div>
-                <div>
-                    <h3>Immune To:</h3>
-                    <ul id="immune">
-                        <li>None selected</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="grid">
-                <input type="button" onclick="UpdateTypes(this.value)" class="btn type-bug" value="Bug" />
-                <input type="button" onclick="UpdateTypes(this.value)" class="btn type-dark" value="Dark" />
-                <input type="button" onclick="UpdateTypes(this.value)" class="btn type-dragon" value="Dragon" />
-                <input type="button" onclick="UpdateTypes(this.value)" class="btn type-electric" value="Electric" />
-                <input type="button" onclick="UpdateTypes(this.value)" class="btn type-fairy" value="Fairy" />
-                <input type="button" onclick="UpdateTypes(this.value)" class="btn type-fighting" value="Fighting" />
-                <input type="button" onclick="UpdateTypes(this.value)" class="btn type-fire" value="Fire" />
-                <input type="button" onclick="UpdateTypes(this.value)" class="btn type-flying" value="Flying" />
-                <input type="button" onclick="UpdateTypes(this.value)" class="btn type-ghost" value="Ghost" />
-                <input type="button" onclick="UpdateTypes(this.value)" class="btn type-grass" value="Grass" />
-                <input type="button" onclick="UpdateTypes(this.value)" class="btn type-ground" value="Ground" />
-                <input type="button" onclick="UpdateTypes(this.value)" class="btn type-ice" value="Ice" />
-                <input type="button" onclick="UpdateTypes(this.value)" class="btn type-normal" value="Normal" />
-                <input type="button" onclick="UpdateTypes(this.value)" class="btn type-poison" value="Poison" />
-                <input type="button" onclick="UpdateTypes(this.value)" class="btn type-psychic" value="Psychic" />
-                <input type="button" onclick="UpdateTypes(this.value)" class="btn type-rock" value="Rock" />
-                <input type="button" onclick="UpdateTypes(this.value)" class="btn type-steel" value="Steel" />
-                <input type="button" onclick="UpdateTypes(this.value)" class="btn type-water" value="Water" />
-            </div>
-            <h2>Type table</h2>
-            <form action="typeChart.html">
-                <input class="nav-btn btn" type="submit" value="Open Type Chart" />
-            </form>
+      <header class="underlined">
+        <h1>Pok&#233;mon Type Helper</h1>
+      </header>
+      <div class="content" id="content">
+        <h2 id="selectedType"></h2>
+        <div class="stats">
+          <div>
+            <h3>Super Effective To:</h3>
+            <ul id="hiAtk">
+              <li>None selected</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Not Very Effective To:</h3>
+            <ul id="loAtk">
+              <li>None selected</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Doesn't Affect:</h3>
+            <ul id="noAtk">
+              <li>None selected</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Resistant To:</h3>
+            <ul id="hiDef">
+              <li>None selected</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Weak To:</h3>
+            <ul id="loDef">
+              <li>None selected</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Immune To:</h3>
+            <ul id="immune">
+              <li>None selected</li>
+            </ul>
+          </div>
         </div>
-        <footer>
-            <div class="footer-content">
-                <a href="../../index.html">AlexBartlett.com Homepage</a>
-            </div>
-        </footer>
+        <div class="grid">
+          <input
+            type="button"
+            onclick="UpdateTypes(this.value)"
+            class="btn type-bug"
+            value="Bug"
+          />
+          <input
+            type="button"
+            onclick="UpdateTypes(this.value)"
+            class="btn type-dark"
+            value="Dark"
+          />
+          <input
+            type="button"
+            onclick="UpdateTypes(this.value)"
+            class="btn type-dragon"
+            value="Dragon"
+          />
+          <input
+            type="button"
+            onclick="UpdateTypes(this.value)"
+            class="btn type-electric"
+            value="Electric"
+          />
+          <input
+            type="button"
+            onclick="UpdateTypes(this.value)"
+            class="btn type-fairy"
+            value="Fairy"
+          />
+          <input
+            type="button"
+            onclick="UpdateTypes(this.value)"
+            class="btn type-fighting"
+            value="Fighting"
+          />
+          <input
+            type="button"
+            onclick="UpdateTypes(this.value)"
+            class="btn type-fire"
+            value="Fire"
+          />
+          <input
+            type="button"
+            onclick="UpdateTypes(this.value)"
+            class="btn type-flying"
+            value="Flying"
+          />
+          <input
+            type="button"
+            onclick="UpdateTypes(this.value)"
+            class="btn type-ghost"
+            value="Ghost"
+          />
+          <input
+            type="button"
+            onclick="UpdateTypes(this.value)"
+            class="btn type-grass"
+            value="Grass"
+          />
+          <input
+            type="button"
+            onclick="UpdateTypes(this.value)"
+            class="btn type-ground"
+            value="Ground"
+          />
+          <input
+            type="button"
+            onclick="UpdateTypes(this.value)"
+            class="btn type-ice"
+            value="Ice"
+          />
+          <input
+            type="button"
+            onclick="UpdateTypes(this.value)"
+            class="btn type-normal"
+            value="Normal"
+          />
+          <input
+            type="button"
+            onclick="UpdateTypes(this.value)"
+            class="btn type-poison"
+            value="Poison"
+          />
+          <input
+            type="button"
+            onclick="UpdateTypes(this.value)"
+            class="btn type-psychic"
+            value="Psychic"
+          />
+          <input
+            type="button"
+            onclick="UpdateTypes(this.value)"
+            class="btn type-rock"
+            value="Rock"
+          />
+          <input
+            type="button"
+            onclick="UpdateTypes(this.value)"
+            class="btn type-steel"
+            value="Steel"
+          />
+          <input
+            type="button"
+            onclick="UpdateTypes(this.value)"
+            class="btn type-water"
+            value="Water"
+          />
+        </div>
+        <h2 class="underlined">Type table</h2>
+        <a class="btn" href="./typeChart.html">Type Chart</a>
+      </div>
     </main>
+    <aside class="return">
+        <a href="../../index.html">AlexBartlett.com Homepage</a>
+    </aside>
     <script src="script.js"></script>
-</body>
-
+  </body>
 </html>
