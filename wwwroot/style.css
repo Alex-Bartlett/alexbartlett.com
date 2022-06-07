@@ -31,11 +31,19 @@ main {
 }
 
 h1 {
+    font-size: 4rem;
+}
+
+h2 {
+    font-size: 3rem;
+}
+
+.title h1 {
     font-size: 128px;
     margin: 0 0 5px 0;
 }
 
-h2 {
+.title h2 {
     margin: 0px;
     font-size: 64px;
 }
