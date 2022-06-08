@@ -134,7 +134,6 @@ function TypeToInt(type) {
 		return null;
 	}
 	else {
-		console.log(index);
 		return index;
 	}
 }
