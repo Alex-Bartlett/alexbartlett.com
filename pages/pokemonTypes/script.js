@@ -256,6 +256,10 @@ function SetSelectedType(type){
 	document.getElementById("selectedType").innerHTML = type;
 }
 
+function ScrollToStart(){
+	document.getElementById("selectedType").scrollIntoView();
+}
+
 function UpdateTypes(type) {
 	SetSelectedType(type);
 	SetHighAttacks(type);
@@ -264,6 +268,7 @@ function UpdateTypes(type) {
 	SetHighDefences(type);
 	SetLowDefences(type);
 	SetImmuneDefences(type);
+	ScrollToStart();
 }
 
 function Init() {
