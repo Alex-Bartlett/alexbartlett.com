@@ -25,6 +25,18 @@ jobs:
         with:
           ruby-version: '3.1.2'
 
+      # Install the gems in the gemfile & install ncftp
+      - name: Setup Environment.
+        run: |
+          cd jekyll-blog
+          bundle install
+      
+      # Build the site
+      - name: Build Site with Jekyll.
+        run: |
+          JEKYLL_ENV=production bundle exec jekyll build --destination ../blog
+          cd ..
+
       # Sync files
       - name: FTP Deploy
         uses: SamKirkland/FTP-Deploy-Action@4.3.0
@@ -39,24 +51,3 @@ jobs:
             **/.github*
             **/.vscode/**
             **/jekyll-blog*
-            
-      # Install the gems in the gemfile & install ncftp
-      - name: Setup Environment.
-        run: |
-          cd jekyll-blog
-          bundle install
-          sudo apt-get install -y ncftp
-      
-      # Build the site
-      - name: Build Site with Jekyll.
-        run: |
-          JEKYLL_ENV=production bundle exec jekyll build
-      
-      # Looks kind of complicated but just uploads the content of _site folder to the ftp server. It does not upload the _site folder itself.
-      - name: Upload site to FTP.
-        env: 
-          ftp_location: ftp.alexbartlett.com # Pass in required secrets.
-          ftp_username: ${{ secrets.FTPLOGIN }}
-          ftp_password: ${{ secrets.FTPKEY }} 
-        run: |
-          ncftpput -R -v -u "$ftp_username" -p "$ftp_password" $ftp_location /public_html/blog _site/* 
