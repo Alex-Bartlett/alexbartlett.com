@@ -1,0 +1,23 @@
+footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  margin: 5em auto 0 auto;
+  padding: 1em 2em;
+  border-top: $border-primary;
+  ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  a {
+    text-decoration: none;
+    &:hover{
+        text-decoration: underline;
+    }
+  }
+}
+
+.footer-socials {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
