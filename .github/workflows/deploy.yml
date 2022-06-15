@@ -59,9 +59,9 @@ jobs:
       
       # Looks kind of complicated but just uploads the content of _site folder to the ftp server. It does not upload the _site folder itself.
       - name: Upload site to FTP.
-        env: 
-          ftp_location: ftp.alexbartlett.com # Pass in required secrets.
-          ftp_username: ${{ secrets.FTPLOGIN }}
-          ftp_password: ${{ secrets.FTPKEY }} 
+        # env: 
+        #   ftp_location: ftp.alexbartlett.com # Pass in required secrets.
+        #   ftp_username: ${{ secrets.FTPLOGIN }}
+        #   ftp_password: ${{ secrets.FTPKEY }} 
         run: |
           ncftpput -R -v -u "$ftp_username" -p "$ftp_password" $ftp_location /public_html/blog _site/* 
