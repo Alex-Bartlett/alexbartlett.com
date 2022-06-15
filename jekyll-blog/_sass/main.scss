@@ -38,10 +38,14 @@ h2 {
     margin: 1ch 0;
 }
 .post-list h2 {
+    color: $text-link;
     margin: 1em 0 0 0;
 }
 .post-list a {
     text-decoration: none;
+    &:hover h2{
+        text-decoration: underline;
+    }
 }
 
 .post-list > li {
