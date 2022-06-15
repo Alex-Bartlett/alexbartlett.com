@@ -34,7 +34,8 @@ jobs:
       # Build the site
       - name: Build Site with Jekyll.
         run: |
-          JEKYLL_ENV=production bundle exec jekyll build --destination ../blog
+          pwd
+          bundle exec jekyll build --destination ../blog
           cd ..
 
       # Sync files
