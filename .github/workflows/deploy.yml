@@ -27,15 +27,11 @@ jobs:
 
       # Sync files
       - name: FTP Deploy
-        env:
-          ftp_location: ftp.alexbartlett.com # Pass in required secrets.
-          ftp_username: ${{ secrets.FTPLOGIN }}
-          ftp_password: ${{ secrets.FTPKEY }} 
         uses: SamKirkland/FTP-Deploy-Action@4.3.0
         with:
-          server: $ftp_location
-          username: $ftp_username
-          password: $ftp_password
+          server: ftp.alexbartlett.com
+          username: ${{ secrets.FTPLOGIN }}
+          password: ${{ secrets.FTPKEY }} 
           server-dir: public_html/
           exclude: |
             **/.git*
