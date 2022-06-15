@@ -1,0 +1,18 @@
+
+nav {
+    width: 100%;
+    margin: 1em;
+    font-size: 18px;
+    word-spacing: 1ch;
+    a {
+        text-decoration: none;
+    }
+    a:hover {
+        text-decoration: underline;
+    }
+}
+
+.nav-selected {
+    color: $text-secondary;
+    text-decoration: underline;
+}

@@ -1,0 +1,18 @@
+---
+layout: default
+title: Blog
+---
+
+<h1 class="underlined">Latest Posts</h1>
+
+<ul class="post-list">
+  {% for post in site.posts %}
+  <li>
+    <a href="{{ post.url }}">
+      <h2>{{ post.title }}</h2>
+      <p>{{ post.excerpt }}</p>
+      <p class="date">{{ post.date | date_to_string }}</p>
+    </a>
+  </li>
+  {% endfor %}
+</ul>
