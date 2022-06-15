@@ -1,0 +1,23 @@
+---
+---
+
+
+// Variables
+$background-primary: rgb(37, 33, 53);
+$background-secondary: rgb(77, 71, 104);
+$foreground-primary: rgb(101, 60, 114);
+$text-primary: #fff;
+$text-secondary: #ddd;
+$text-link: rgb(204, 143, 212);
+$highlight: rgb(107, 103, 128);
+$border-primary: solid $foreground-primary 2px;
+$border-secondary: solid $background-secondary 2px;
+$border-radius: 8px;
+$font-heading: 'Courier New', Courier, monospace;
+$font-paragraph: 'Work Sans', sans-serif;
+//Imports
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans&display=swap');
+
+
+@import "nav";
+@import "main";

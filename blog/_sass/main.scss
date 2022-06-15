@@ -1,0 +1,95 @@
+
+/*
+*
+* REMEMBER: MOBILE FIRST!!!!
+*
+*/
+
+* {
+    color: $text-primary;
+    font-family: $font-paragraph;
+}
+
+body {
+    width: 90%;
+    margin: 0 auto;
+    background-color: $background-primary;
+}
+
+h1,
+h2,
+h3 {
+    // font-family: $font-heading;
+    font-weight: 500;
+}
+
+h1 {
+    font-size: 48px;
+}
+h2 {
+    font-size: 28px;
+}
+
+// Post list
+.post-list {
+    padding: 0;
+}
+.post-list p {
+    margin: 1ch 0;
+}
+.post-list h2 {
+    margin: 1em 0 0 0;
+}
+.post-list a {
+    text-decoration: none;
+}
+
+.post-list > li {
+    list-style: none;
+}
+
+.post-list .date {
+    color: $text-secondary;
+}
+
+// End Post List
+
+// Post
+
+.post a {
+    text-decoration: none;
+    font-weight: 600;
+    color: $text-link;
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+// End Post
+
+// Misc
+
+.underlined {
+    width: 100%;
+    border-bottom: $border-primary;
+}
+
+// End Misc
+
+@media screen {
+    @media (min-width: 700px) {
+        body {
+            width: 50%;
+            margin: 0 auto;
+        }
+        h1 {
+            font-size: 48px;
+        }
+        h2 {
+            font-size: 32px;
+        }
+        p {
+            font-size: 18px;
+        }
+    }
+}
