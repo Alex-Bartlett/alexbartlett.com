@@ -17,6 +17,6 @@ Below the type buttons is a type chart button. Clicking this will open up the ty
 
 ## How it's made
 
-I made this with Javascript by taking the chart and writing it as a 2D array. If you would like to make something similar involving pokemon type's strengths and weaknesses, I made the array <a href="https://github.com/Alex-Bartlett/Pokemon-Type-Chart">available on GitHub</a>. Let me know if you end up using it, I'd like to see what you made.
+I made this with Javascript by taking the chart and writing it as a 2D array. If you would like to make something similar involving pokemon type's strengths and weaknesses, I made the array <a href="https://github.com/Alex-Bartlett/Pokemon-Type-Chart" target="_blank">available on GitHub</a>. Let me know if you end up using it, I'd like to see what you made.
 
 Thanks for checking it out, I hope it is useful to people. If you have any feedback let me know, I'd be happy to add suitable improvements. <a href="mailto:dev@alexbartlett.com?subject=Pokemon Type Helper Suggestion">Contact Me.</a>
