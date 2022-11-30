@@ -9,6 +9,12 @@
             "request": "launch",
             "name": "Open index.html",
             "file": "c:\\Users\\nitro\\OneDrive\\Documents\\alexbartlett.com\\index.html"
+        },
+		{
+            "type": "pwa-msedge",
+            "request": "launch",
+            "name": "Open chordsInKey",
+            "file": "c:\\Users\\nitro\\OneDrive\\Documents\\alexbartlett.com\\pages\\chordsInKey.html"
         }
     ]
 }
