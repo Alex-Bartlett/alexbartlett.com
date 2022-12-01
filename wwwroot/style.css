@@ -13,7 +13,7 @@
 * {
     background-color: var(--background-primary);
     color: var(--text-primary);
-    font-family: "Courier New", Courier, monospace;
+    font-family: "Rubik", sans-serif;
     scroll-behavior: smooth;
 }
 
@@ -62,7 +62,8 @@ h1,
 h2,
 h3,
 h4 {
-    font-weight: 500;
+    font-family: "Noto Sans Mono", "Courier New", Courier, monospace;
+    font-weight: normal;
 }
 
 h2,
@@ -75,6 +76,7 @@ header {
     margin-top: 100px;
 }
 
+
 /* Title animations */
 
 @keyframes slideInFirst {
@@ -82,7 +84,6 @@ header {
         transform: translateX(-1ch);
         opacity: 0;
     }
-
     to {
         transform: translateX(0);
         opacity: 1;
@@ -94,12 +95,10 @@ header {
         transform: translateX(-1ch);
         opacity: 0;
     }
-
     50% {
         transform: translateX(-1ch);
         opacity: 0;
     }
-
     100% {
         transform: translateX(0);
         opacity: 1;
@@ -112,22 +111,20 @@ header {
         opacity: 0;
         margin-bottom: 100vh;
     }
-
     50% {
         transform: translateX(-1ch);
         opacity: 0;
         margin-bottom: 100vh;
     }
-
     75% {
         transform: translateX(0);
         opacity: 1;
     }
-
     100% {
         margin-bottom: 0;
     }
 }
+
 
 /* Title animations */
 
@@ -282,6 +279,7 @@ footer ul {
     list-style: none;
     padding-left: 0;
 }
+
 footer a {
     text-decoration: none;
 }
@@ -299,7 +297,6 @@ footer a:hover {
     a.btn:hover {
         background-color: var(--foreground-primary);
     }
-
     .cards>a:hover {
         transform: translate(0, -10px);
         background-color: transparent;
@@ -312,30 +309,24 @@ footer a:hover {
         body {
             width: 70%;
         }
-
         .title>h1 {
             font-size: 100px;
         }
-
         .socials {
             margin: 40px auto;
         }
-
         .socials span,
         a.btn {
             font-size: 20px;
         }
     }
-
     @media (max-width: 1080px) {
         .cards {
             grid-template-columns: 1fr 1fr;
         }
-
         .about {
             flex-wrap: wrap-reverse;
         }
-
         figure {
             min-width: 0;
             min-height: 0;
@@ -343,33 +334,26 @@ footer a:hover {
             height: 100%;
         }
     }
-
     @media (max-width: 700px) {
         body {
             width: 80%;
         }
-
         .title>h1 {
             font-size: 64px;
         }
-
         .title>h2 {
             font-size: 48px;
         }
-
         .socials span {
             display: none;
         }
-
         .socials a>img {
             margin: 0;
         }
-
         #linkedin {
             margin-left: 5px;
         }
     }
-
     @media (max-width: 600px) {
         .cards {
             grid-template-columns: 1fr;
