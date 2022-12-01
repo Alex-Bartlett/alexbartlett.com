@@ -69,6 +69,7 @@ function ChordToString(note, triadType, numeral) {
     switch (triadType) {
         case 0:
             prefix = prefix.toUpperCase();
+            break;
         case 1:
             triad = "m";
             break;
