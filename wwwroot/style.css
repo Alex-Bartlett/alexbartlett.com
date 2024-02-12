@@ -1,362 +1,381 @@
 :root {
-    --background-primary: rgb(37, 33, 53);
-    --background-secondary: rgb(77, 71, 104);
-    --foreground-primary: rgb(101, 60, 114);
-    --text-primary: #fff;
-    --text-secondary: #ddd;
-    --highlight: rgb(107, 103, 128);
-    --border-primary: solid var(--foreground-primary) 2px;
-    --border-secondary: solid var(--background-secondary) 2px;
-    --border-radius: 8px;
+	--background-primary: rgb(37, 33, 53);
+	--background-secondary: rgb(77, 71, 104);
+	--foreground-primary: rgb(101, 60, 114);
+	--text-primary: #fff;
+	--text-secondary: #ddd;
+	--highlight: rgb(107, 103, 128);
+	--border-primary: solid var(--foreground-primary) 2px;
+	--border-secondary: solid var(--background-secondary) 2px;
+	--border-radius: 8px;
 }
 
 * {
-    background-color: var(--background-primary);
-    color: var(--text-primary);
-    font-family: "Rubik", sans-serif;
-    scroll-behavior: smooth;
+	background-color: var(--background-primary);
+	color: var(--text-primary);
+	font-family: "Rubik", sans-serif;
+	scroll-behavior: smooth;
 }
 
 * ::selection {
-    background-color: var(--highlight);
+	background-color: var(--highlight);
 }
 
 body {
-    width: 50%;
-    margin: auto;
+	width: 50%;
+	margin: auto;
 }
 
 main {
-    box-sizing: border-box;
-    margin-bottom: 4em;
+	box-sizing: border-box;
+	margin-bottom: 4em;
 }
 
 h1 {
-    font-size: 4rem;
+	font-size: 4rem;
 }
 
 h2 {
-    font-size: 3rem;
+	font-size: 3rem;
 }
 
 .title h1 {
-    font-size: 128px;
-    margin: 0 0 5px 0;
+	font-size: 128px;
+	margin: 0 0 5px 0;
 }
 
 .title h2 {
-    margin: 0px;
-    font-size: 64px;
+	margin: 0px;
+	font-size: 64px;
 }
 
 h3 {
-    font-size: 32px;
-    margin-bottom: 0;
+	font-size: 32px;
+	margin-bottom: 0;
 }
 
 h4 {
-    margin: 0 0 0.5em 0;
+	margin: 0 0 0.5em 0;
 }
 
 h1,
 h2,
 h3,
 h4 {
-    font-family: "Noto Sans Mono", "Courier New", Courier, monospace;
-    font-weight: normal;
+	font-family: "Noto Sans Mono", "Courier New", Courier, monospace;
+	font-weight: normal;
 }
 
 h2,
 h4,
 p {
-    color: var(--text-secondary);
+	color: var(--text-secondary);
 }
 
 header {
-    margin-top: 100px;
+	margin-top: 100px;
 }
 
 
 /* Title animations */
 
 @keyframes slideInFirst {
-    from {
-        transform: translateX(-1ch);
-        opacity: 0;
-    }
-    to {
-        transform: translateX(0);
-        opacity: 1;
-    }
+	from {
+		transform: translateX(-1ch);
+		opacity: 0;
+	}
+
+	to {
+		transform: translateX(0);
+		opacity: 1;
+	}
 }
 
 @keyframes slideInSecond {
-    0% {
-        transform: translateX(-1ch);
-        opacity: 0;
-    }
-    50% {
-        transform: translateX(-1ch);
-        opacity: 0;
-    }
-    100% {
-        transform: translateX(0);
-        opacity: 1;
-    }
+	0% {
+		transform: translateX(-1ch);
+		opacity: 0;
+	}
+
+
+	50% {
+		transform: translateX(-1ch);
+		opacity: 0;
+	}
+
+	100% {
+		transform: translateX(0);
+		opacity: 1;
+	}
 }
 
 @keyframes slideInLast {
-    0% {
-        transform: translateX(-1ch);
-        opacity: 0;
-        margin-bottom: 100vh;
-    }
-    50% {
-        transform: translateX(-1ch);
-        opacity: 0;
-        margin-bottom: 100vh;
-    }
-    75% {
-        transform: translateX(0);
-        opacity: 1;
-    }
-    100% {
-        margin-bottom: 0;
-    }
+	0% {
+		transform: translateX(-1ch);
+		opacity: 0;
+	}
+
+	50% {
+		transform: translateX(-1ch);
+		opacity: 0;
+	}
+
+	75% {
+		transform: translateX(0);
+		opacity: 1;
+	}
+
+	100% {
+		margin-bottom: 0;
+	}
 }
 
 
 /* Title animations */
 
 .title h1:first-child {
-    animation: slideInFirst 1s ease-out;
+	animation: slideInFirst 0.5s ease-out;
 }
 
 .title h1:last-child {
-    animation: slideInSecond 1.5s ease-out;
+	animation: slideInSecond 1s ease-out;
 }
 
 .title:last-of-type {
-    animation: slideInLast 4s ease-out;
+	animation: slideInLast 2s ease-out;
 }
 
 .title>h1,
 .title>h2 {
-    display: inline-block;
-    margin-right: 16px;
+	display: inline-block;
+	margin-right: 16px;
 }
 
 .underlined {
-    border-bottom: var(--border-primary);
+	border-bottom: var(--border-primary);
 }
 
 a.btn {
-    position: relative;
-    display: inline-block;
-    text-align: center;
-    border: var(--border-primary);
-    border-radius: var(--border-radius);
-    margin: 20px 0;
-    padding: 10px;
-    font-size: 24px;
-    text-decoration: none;
-    transition: background-color 0.2s;
+	position: relative;
+	display: inline-block;
+	text-align: center;
+	border: var(--border-primary);
+	border-radius: var(--border-radius);
+	margin: 20px 0;
+	padding: 10px;
+	font-size: 24px;
+	text-decoration: none;
+	transition: background-color 0.2s;
 }
 
 .socials {
-    display: flex;
-    justify-content: space-between;
-    max-width: 50em;
-    margin: 80px auto;
+	display: flex;
+	justify-content: space-between;
+	max-width: 50em;
+	margin: 80px auto;
 }
 
 .socials a {
-    display: flex;
-    width: 7em;
-    align-items: center;
-    justify-content: center;
-    margin: 0;
+	display: flex;
+	width: 7em;
+	align-items: center;
+	justify-content: center;
+	margin: 0;
 }
 
 .socials a+a {
-    margin-left: 20px;
+	margin-left: 20px;
 }
 
 .socials span {
-    color: var(--text-secondary);
-    background: transparent;
+	color: var(--text-secondary);
+	background: transparent;
 }
 
 .socials a>img {
-    height: 1em;
-    width: 1em;
-    margin-right: 10px;
-    background: transparent;
+	height: 1em;
+	width: 1em;
+	margin-right: 10px;
+	background: transparent;
 }
 
 #linkedin {
-    width: 1.2em;
-    margin-right: calc(10px - 0.2em);
+	width: 1.2em;
+	margin-right: calc(10px - 0.2em);
 }
 
 .about {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    flex-wrap: nowrap;
-    gap: 20px;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	flex-wrap: nowrap;
+	gap: 20px;
 }
 
 .about p {
-    font-size: 20px;
+	font-size: 20px;
 }
 
 figure {
-    position: relative;
-    min-width: 400px;
-    min-height: 400px;
-    height: 400px;
-    width: 400px;
+	position: relative;
+	min-width: 400px;
+	min-height: 400px;
+	height: 400px;
+	width: 400px;
 }
 
 figure,
 figure img {
-    margin: 0;
-    display: inline-block;
+	margin: 0;
+	display: inline-block;
 }
 
 .about figure::after {
-    content: "";
-    box-shadow: 0 0 8px 8px var(--background-primary) inset;
-    border-radius: var(--border-radius);
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
+	content: "";
+	box-shadow: 0 0 8px 8px var(--background-primary) inset;
+	border-radius: var(--border-radius);
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
 }
 
 img.portrait {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 10px;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	border-radius: 10px;
 }
 
 .cards {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 1em;
-    margin-top: 40px;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	gap: 1em;
+	margin-top: 40px;
 }
 
 .cards>a {
-    text-decoration: none;
-    background-color: var(--background-secondary);
-    border: var(--border-secondary);
-    border-radius: var(--border-radius);
-    padding: 1em;
-    transition: all 0.5s ease;
+	text-decoration: none;
+	background-color: var(--background-secondary);
+	border: var(--border-secondary);
+	border-radius: var(--border-radius);
+	padding: 1em;
+	transition: all 0.5s ease;
 }
 
 .cards>a * {
-    background: transparent;
+	background: transparent;
 }
 
 .cards>a>h4 {
-    font-size: 28px;
+	font-size: 28px;
 }
 
 footer {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    width: 100%;
-    margin: 0 auto;
-    padding: 1em 2em;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	width: 100%;
+	margin: 0 auto;
+	padding: 1em 2em;
 }
 
 footer ul {
-    list-style: none;
-    padding-left: 0;
+	list-style: none;
+	padding-left: 0;
 }
 
 footer a {
-    text-decoration: none;
+	text-decoration: none;
 }
 
 footer a:hover {
-    text-decoration: underline;
+	text-decoration: underline;
 }
 
 .footer-socials {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
 }
 
 @media (hover: hover) {
-    a.btn:hover {
-        background-color: var(--foreground-primary);
-    }
-    .cards>a:hover {
-        transform: translate(0, -10px);
-        background-color: transparent;
-        border: var(--border-primary);
-    }
+	a.btn:hover {
+		background-color: var(--foreground-primary);
+	}
+
+	.cards>a:hover {
+		transform: translate(0, -10px);
+		background-color: transparent;
+		border: var(--border-primary);
+	}
 }
 
 @media screen {
-    @media (max-width: 1520px) {
-        body {
-            width: 70%;
-        }
-        .title>h1 {
-            font-size: 100px;
-        }
-        .socials {
-            margin: 40px auto;
-        }
-        .socials span,
-        a.btn {
-            font-size: 20px;
-        }
-    }
-    @media (max-width: 1080px) {
-        .cards {
-            grid-template-columns: 1fr 1fr;
-        }
-        .about {
-            flex-wrap: wrap-reverse;
-        }
-        figure {
-            min-width: 0;
-            min-height: 0;
-            width: 100%;
-            height: 100%;
-        }
-    }
-    @media (max-width: 700px) {
-        body {
-            width: 80%;
-        }
-        .title>h1 {
-            font-size: 64px;
-        }
-        .title>h2 {
-            font-size: 48px;
-        }
-        .socials span {
-            display: none;
-        }
-        .socials a>img {
-            margin: 0;
-        }
-        #linkedin {
-            margin-left: 5px;
-        }
-    }
-    @media (max-width: 600px) {
-        .cards {
-            grid-template-columns: 1fr;
-        }
-    }
+	@media (max-width: 1520px) {
+		body {
+			width: 70%;
+		}
+
+		.title>h1 {
+			font-size: 100px;
+		}
+
+		.socials {
+			margin: 40px auto;
+		}
+
+		.socials span,
+		a.btn {
+			font-size: 20px;
+		}
+	}
+
+	@media (max-width: 1080px) {
+		.cards {
+			grid-template-columns: 1fr 1fr;
+		}
+
+		.about {
+			flex-wrap: wrap-reverse;
+		}
+
+		figure {
+			min-width: 0;
+			min-height: 0;
+			width: 100%;
+			height: 100%;
+		}
+	}
+
+	@media (max-width: 700px) {
+		body {
+			width: 80%;
+		}
+
+		.title>h1 {
+			font-size: 64px;
+		}
+
+		.title>h2 {
+			font-size: 48px;
+		}
+
+		.socials span {
+			display: none;
+		}
+
+		.socials a>img {
+			margin: 0;
+		}
+
+		#linkedin {
+			margin-left: 5px;
+		}
+	}
+
+	@media (max-width: 600px) {
+		.cards {
+			grid-template-columns: 1fr;
+		}
+	}
 }
